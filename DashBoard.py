@@ -13,7 +13,7 @@ import lime
 import lime.lime_tabular
 
 #Importation de la base Test
-fic_sav_testDash = 'C:/Users/CHERIF/Desktop/OPENCLASSROOM/PROJET_7/testDash.pickle'
+fic_sav_testDash = 'pickle/testDash.pickle'
 # Chargement de test_set2
 with open(fic_sav_testDash, 'rb') as testDash:
     TestDash = pickle.load(testDash)
