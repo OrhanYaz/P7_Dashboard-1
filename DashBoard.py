@@ -20,7 +20,7 @@ with open(fic_sav_testDash, 'rb') as testDash:
 TestDash.head()
 
 #Importation de la base Test
-fic_sav_trainDash = 'C:/Users/CHERIF/Desktop/OPENCLASSROOM/PROJET_7/trainDash.pickle'
+fic_sav_trainDash = 'pickle/trainDash.pickle'
 # Chargement de test_set2
 with open(fic_sav_trainDash, 'rb') as trainDash:
     TrainDash = pickle.load(trainDash)
