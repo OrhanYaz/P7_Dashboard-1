@@ -81,17 +81,17 @@ st.markdown("<h1 style='text-align: center; color: Black; font-size: 50px;'>INDI
 
 import dill
 #Importation de la base Test
-fic_sav_Explainer = 'C:/Users/CHERIF/Desktop/OPENCLASSROOM/PROJET_7/Explainer.dat'
+fic_sav_Explainer = 'pickle/Explainer.dat'
 with open(fic_sav_Explainer, 'rb') as f1:
     Explainer = dill.load(f1)
 
 
-fic_sav_DataBaseTest2 = 'C:/Users/CHERIF/Desktop/OPENCLASSROOM/PROJET_7/DataBaseTest2.pickle'
+fic_sav_DataBaseTest2 = 'pickle/DataBaseTest2.pickle'
 with open(fic_sav_DataBaseTest2, 'rb') as DataBaseTest2:
     DataBaseTest = pickle.load(DataBaseTest2)
 
 
-fic_sav_model_Forest1 = 'C:/Users/CHERIF/Desktop/OPENCLASSROOM/PROJET_7/model_Forest1.pickle'
+fic_sav_model_Forest1 = 'pickle/model_Forest1.pickle'
 with open(fic_sav_model_Forest1, 'rb') as model_Forest1:
     model_Forest = pickle.load(model_Forest1)
 
