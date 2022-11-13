@@ -11,5 +11,5 @@ streamlit==1.5.1
 lightgbm
 dill==0.3.4
 flask==2.2.2
-json==2.0.9
+json
 urllib.request==3.10
