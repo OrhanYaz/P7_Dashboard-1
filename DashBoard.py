@@ -1,6 +1,5 @@
 import json  # ajouter au requirement
 import pickle
-from urllib.request import urlopen  # ajouter au requirement
 
 import lime
 import lime.lime_tabular
@@ -9,6 +8,7 @@ import numpy as np
 import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
+import requests
 import seaborn as sns
 import streamlit as st
 import streamlit.components.v1 as components
@@ -34,7 +34,8 @@ TrainDash.head()
 platform_name = st.sidebar.selectbox("Select ID client", options=TestDash.SK_ID_CURR.unique())
 API_url = "http://127.0.0.1:5000/prediction/" + str(platform_name)
 json_url = urlopen(API_url)
-API_data = json.loads(json_url.read())
+json_url = requests.get(API_url)
+API_data = json_url.json()
 
 TestDash["Probas_Prevision"] = API_data["proba"]
 B = TestDash["Probas_Prevision"][TestDash.SK_ID_CURR == platform_name].values[0]
