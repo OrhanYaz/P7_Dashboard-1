@@ -32,7 +32,7 @@ TrainDash.head()
 # st.subheader('Platform wise sales')
 # drop down for unique value from a column
 platform_name = st.sidebar.selectbox("Select ID client", options=TestDash.SK_ID_CURR.unique())
-API_url = "http://127.0.0.1:5000/prediction/" + str(platform_name)
+API_url = "https://credit-scoretest.herokuapp.com/prediction/" + str(platform_name)
 json_url = requests.get(API_url)
 API_data = json_url.json()
 
